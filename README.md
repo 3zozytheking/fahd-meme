@@ -7,7 +7,7 @@ index.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💬 مقولات عزوزي الأسطورية 💬</title>
     <style>
-        /* خلفية الصفحة بتأثير فاخر */
+        /* ضبط التنسيق بحيث يكون متجاوب */
         body {
             text-align: center;
             font-family: Arial, sans-serif;
@@ -18,16 +18,17 @@ index.html
             justify-content: center;
             align-items: center;
             color: white;
+            padding: 10px;
         }
 
         h1 {
-            font-size: 50px;
+            font-size: 6vw; /* حجم متغير حسب الجهاز */
             text-shadow: 2px 2px 10px black;
         }
 
         button {
-            padding: 15px 30px;
-            font-size: 20px;
+            padding: 12px 25px;
+            font-size: 4vw; /* يجعل الزر أكبر على الجوال */
             font-weight: bold;
             background-color: #3b5998;
             color: white;
@@ -44,7 +45,7 @@ index.html
         }
 
         .quote {
-            font-size: 28px;
+            font-size: 5vw; /* حجم النص يتناسب مع الجوال */
             margin-top: 20px;
             font-weight: bold;
             color: yellow;
@@ -54,9 +55,24 @@ index.html
         /* صندوق يحتوي على المقولات */
         .container {
             background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
+            padding: 15px;
             border-radius: 15px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            max-width: 90%; /* يجعل التصميم مناسب للجوال */
+        }
+
+        /* استجابة خاصة للجوال */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 8vw;
+            }
+            button {
+                font-size: 5vw;
+                padding: 10px 20px;
+            }
+            .quote {
+                font-size: 6vw;
+            }
         }
     </style>
 </head>
