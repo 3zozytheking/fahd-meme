@@ -4,7 +4,7 @@ index.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحدي من يعرف عزوزي؟ 🔥</title>
+    <title>🔥 تحدي: من يعرف عزوزي أكثر؟ 🔥</title>
     <style>
         body {
             text-align: center;
@@ -39,6 +39,11 @@ index.html
             margin-top: 20px;
             font-weight: bold;
         }
+        .final-result {
+            font-size: 26px;
+            margin-top: 40px;
+            color: green;
+        }
     </style>
 </head>
 <body>
@@ -55,6 +60,8 @@ index.html
     </div>
 
     <p class="result" id="resultText"></p>
+
+    <p class="final-result" id="finalResultText"></p>
 
     <script>
         let questions = [
@@ -97,6 +104,16 @@ index.html
                 question: "من هو العدو الأبدي لعزوزي؟",
                 options: ["قنيصع", "أحد أساتذته", "زميل عمله", "فريقه المفضل إذا خسر"],
                 correct: 0
+            },
+            { 
+                question: "أين يحب عزوزي أن يقضي وقت فراغه؟",
+                options: ["في البحر", "في الجيم", "في البيت يبرمج", "في المقهى مع الأصدقاء"],
+                correct: 2
+            },
+            { 
+                question: "ما هو الشيء الذي يشغل بال عزوزي أكثر من أي شيء آخر؟",
+                options: ["العمل", "البرمجة", "الرياضة", "الخطط المستقبلية"],
+                correct: 3
             }
         ];
 
@@ -111,7 +128,7 @@ index.html
                     buttons[i].innerText = questions[currentQuestion].options[i];
                 }
             } else {
-                showResult();
+                showFinalResult();
             }
         }
 
@@ -123,7 +140,7 @@ index.html
             loadQuestion();
         }
 
-        function showResult() {
+        function showFinalResult() {
             let resultText = "";
             if (score === questions.length) {
                 resultText = "🔥🔥 أسطوري! أنت تعرف عزوزي أكثر مما يعرف نفسه! 🔥🔥";
@@ -134,6 +151,7 @@ index.html
             }
             document.getElementById("quiz").style.display = "none";
             document.getElementById("resultText").innerText = resultText;
+            document.getElementById("finalResultText").innerText = `نقاطك: ${score} من ${questions.length}`;
         }
 
         loadQuestion();
