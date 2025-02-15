@@ -1,0 +1,67 @@
+index.html
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قنيصع الأسطورة</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: red;
+            font-size: 40px;
+        }
+        h2 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #c70039;
+        }
+        .joke {
+            font-size: 22px;
+            margin-top: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>قنيصع 😂🔥</h1>
+    <h2>الأسطورة فهد المعروف باسم قنيصع</h2>
+    <p>يا جماعة، ترى قنيصع عنده سر خطير، اضغط الزر واكتشفه! 👀</p>
+
+    <button onclick="showJoke()">اضغط هنا يا قنيصع</button>
+
+    <p class="joke" id="jokeText"></p>
+
+    <script>
+        function showJoke() {
+            let jokes = [
+                "😂 قنيصع أكثر واحد يتفلسف، بس يوم تجي الجد يقول 'والله مدري يا شباب'",
+                "🔥 قنيصع إذا قال 'خلاص بضبط الوضع'، اعرف أن الموضوع راح فيها!",
+                "🤣 قنيصع أكثر واحد يخطط للطلعات، بس وقت الحساب يقول 'يا عيال بترجعولي بعدين صح؟'",
+                "💀 قنيصع دايم يقول 'أنا بعلمكم سر'، ويطلع السر أنه ما عنده سر أصلًا!",
+                "😂 قنيصع لما يفتح القروب الساعة 3 الفجر ويقول 'مين صاحي؟' وهو نفسه نايم!"
+            ];
+            let randomIndex = Math.floor(Math.random() * jokes.length);
+            document.getElementById("jokeText").innerText = jokes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
