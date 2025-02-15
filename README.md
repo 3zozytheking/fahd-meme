@@ -7,45 +7,69 @@ index.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💬 مقولات عزوزي الأسطورية 💬</title>
     <style>
+        /* خلفية الصفحة بتأثير فاخر */
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
+            background: linear-gradient(135deg, #ff4e50, #fc913a, #f9d423); 
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
         }
+
         h1 {
-            color: red;
-            font-size: 40px;
+            font-size: 50px;
+            text-shadow: 2px 2px 10px black;
         }
+
         button {
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #ff5733;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #3b5998;
             color: white;
             border: none;
             cursor: pointer;
             margin-top: 20px;
-            border-radius: 5px;
+            border-radius: 10px;
+            transition: 0.3s;
         }
+
         button:hover {
-            background-color: #c70039;
+            background-color: #1e2e5e;
+            transform: scale(1.1);
         }
+
         .quote {
-            font-size: 24px;
+            font-size: 28px;
             margin-top: 20px;
-            color: blue;
             font-weight: bold;
+            color: yellow;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        /* صندوق يحتوي على المقولات */
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
 
-    <h1>🔥 مقولات عزوزي الأسطورية 🔥</h1>
-    <p>اضغط الزر لتحصل على حكمة من **عزوزي الفيلسوف**! 😂</p>
+    <div class="container">
+        <h1>🔥 مقولات عزوزي الأسطورية 🔥</h1>
+        <p>📢 اضغط الزر لتحصل على حكمة من **عزوزي الفيلسوف**! 😂</p>
 
-    <button onclick="showQuote()">🔮 اعطني حكمة 🔮</button>
+        <button onclick="showQuote()">🔮 اعطني حكمة 🔮</button>
 
-    <p class="quote" id="quoteText"></p>
+        <p class="quote" id="quoteText"></p>
+    </div>
 
     <script>
         function showQuote() {
