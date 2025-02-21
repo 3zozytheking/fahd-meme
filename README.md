@@ -3,108 +3,124 @@ index.html
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💬 مقولات عزوزي الأسطورية 💬</title>
-    <style>
-        /* ضبط التنسيق بحيث يكون متجاوب */
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ff4e50, #fc913a, #f9d423); 
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            padding: 10px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رسالة اعتذار من عزوزي إلى دُنا</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc); /* خلفية رايقة */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 10px;
+      overflow: hidden;
+      position: relative;
+    }
 
-        h1 {
-            font-size: 6vw; /* حجم متغير حسب الجهاز */
-            text-shadow: 2px 2px 10px black;
-        }
+    h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 10px black;
+      animation: fadeIn 3s ease-out;
+    }
 
-        button {
-            padding: 12px 25px;
-            font-size: 4vw; /* يجعل الزر أكبر على الجوال */
-            font-weight: bold;
-            background-color: #3b5998;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
+    .message-box {
+      font-size: 1.5em;
+      width: 80%;
+      text-align: center;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeMessage 3s ease-out forwards;
+    }
 
-        button:hover {
-            background-color: #1e2e5e;
-            transform: scale(1.1);
-        }
+    button {
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #ff6347;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      margin-top: 20px;
+      cursor: pointer;
+      animation: bounce 2s infinite;
+    }
 
-        .quote {
-            font-size: 5vw; /* حجم النص يتناسب مع الجوال */
-            margin-top: 20px;
-            font-weight: bold;
-            color: yellow;
-            text-shadow: 2px 2px 5px black;
-        }
+    button:hover {
+      background-color: #ff4500;
+    }
 
-        /* صندوق يحتوي على المقولات */
-        .container {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-            max-width: 90%; /* يجعل التصميم مناسب للجوال */
-        }
+    .hearts {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: floatingHearts 3s ease-in-out infinite;
+    }
 
-        /* استجابة خاصة للجوال */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 8vw;
-            }
-            button {
-                font-size: 5vw;
-                padding: 10px 20px;
-            }
-            .quote {
-                font-size: 6vw;
-            }
-        }
-    </style>
+    .heart {
+      font-size: 3em;
+      color: #ff69b4;
+      animation: heartBounce 1.5s infinite;
+      margin: 0 5px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeMessage {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes floatingHearts {
+      0% { top: 10%; opacity: 0.8; }
+      50% { top: 20%; opacity: 1; }
+      100% { top: 10%; opacity: 0.8; }
+    }
+
+    @keyframes heartBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
 </head>
 <body>
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
 
-    <div class="container">
-        <h1>🔥 مقولات عزوزي الأسطورية 🔥</h1>
-        <p>📢 اضغط الزر لتحصل على حكمة من **عزوزي الفيلسوف**! 😂</p>
+  <div class="hearts">
+    <span class="heart">💖</span>
+    <span class="heart">💖</span>
+    <span class="heart">💖</span>
+    <span class="heart">💖</span>
+  </div>
 
-        <button onclick="showQuote()">🔮 اعطني حكمة 🔮</button>
-
-        <p class="quote" id="quoteText"></p>
+  <div>
+    <h1>رسالة اعتذار من عزوزي إلى دُنا</h1>
+    <div class="message-box">
+      <p>عزيزتي **دُنا**،<br><br>
+      أنا أعلم أن الأيام الماضية كانت مليئة بالتصرفات التي لم تعكس شخصيتي الحقيقية،<br><br>
+      ولكني اليوم أدرك تمامًا أن **الخطأ** كان في تصرفاتي تجاهك.<br><br>
+      **دُنا**، أنتِ شخص عزيز جدًا على قلبي، وأنا **أعتذر** عن أي تصرف أو كلمة غير لائقة صدرت مني في تلك الفترة.<br><br>
+      لا يمكنني العيش مع فكرة أنني **أقللت** من قيمتك أو أسأت إليك.<br><br>
+      أتمنى أن تقبلي اعتذاري، وأعدك أنني سأبذل كل جهدي لكي لا أكرر **هذا الخطأ**.<br><br>
+      مع خالص اعتذاري،<br><br>
+      **عزوزي**</p>
     </div>
-
-    <script>
-        function showQuote() {
-            let quotes = [
-                "😂 قنيصع أكثر واحد ينصح الناس، لكنه يحتاج نصيحة أول!",
-                "🔥 اللي ما يعرف عزوزي، يعتبر نفسه ما عاش الحياة!",
-                "🤣 يوم تفكر ترفع ضغط عزوزي، اعرف إنك تلعب بالنار!",
-                "💀 البلاك بورد؟ نعمة إذا صار عن بعد، ونقمة إذا صرت مضطر تحضر!",
-                "😂 المحاضرة بالفراش؟ رفاهية لا يفهمها إلا اللي يعشق النوم!",
-                "🔥 إذا كنت بتواجه صعوبات، تذكر أنك مو قنيصع، فكل شيء سهل عليك!",
-                "🤣 الدنيا يوم لك ويوم عليك، لكن قنيصع دايمًا عليه!",
-                "💀 إذا قال عزوزي 'خلني أجرب'، فاعرف أن الابتكار في طريقه!",
-                "😂 كل دقيقة مع عزوزي = 10 دقائق ضحك بدون توقف!",
-                "🔥 سر النجاح؟ نام بدري، اشرب قهوة، وطقطق على قنيصع!"
-            ];
-            let randomIndex = Math.floor(Math.random() * quotes.length);
-            document.getElementById("quoteText").innerText = quotes[randomIndex];
-        }
-    </script>
-
+    <button onclick="alert('تم إرسال الرسالة بنجاح!')">إرسال الرسالة</button>
+  </div>
+  
 </body>
 </html>
